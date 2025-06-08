@@ -96,3 +96,133 @@ int main(){
     cout<<year;
     return 0;
 }</div>
+
+
+<div>
+1030a
+<br>
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;cin>>n;
+    bool hard = false;
+    while(n--){
+        int a;
+        cin>>a;
+        if(a==1){
+            cout<<"hard"<<endl;
+            hard = true;
+            break;
+        }
+    }
+    if(hard == false){cout<<"easy"<<endl;}
+    return 0;
+}
+
+</div>
+
+
+<div>
+230b  #not optimized
+<br>
+#include <bits/stdc++.h>
+using namespace std;
+bool tprime(int n){
+    int count =0;
+    int value=0;
+    for(int i=2;i<n;i++){
+        if(n%i==0){
+            value = i;
+            count++;
+        }
+    }
+    if(count ==1 && value*value == n){
+        return true;
+    }return false;
+}
+int main(){
+    int n;cin>>n;
+    while (n--){
+        int a;cin>>a;
+        if(tprime(a)){
+            cout<<"YES"<<endl;
+        } else{
+            cout<<"NO"<<endl;
+        }
+    }
+    return 0;
+}
+
+</br>
+
+#optimized 
+
+
+
+
+</div>
+
+
+<div>
+118b
+<br>
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    for(int i=0;i<=n;i++){
+        for(int j=n-i-1;j>=0;j--){
+            cout<<"  ";
+        }
+        for(int j=0;j<=i;j++){
+            cout<< j;
+            if(j!=i){
+                cout<<" ";
+            }
+        }
+        for(int j = i-1;j>=0;j--){
+            cout<<" "<<j;
+            
+        }
+        cout<<endl;
+    }
+    
+    for(int i=n-1;i>=0;i--){
+        for(int j=n-i;j>0 ;j--){
+            cout<<"  ";
+        } 
+        for(int j=0;j<=i;j++){
+            cout<<j;
+            if(j!=i){
+                cout<<" ";
+            }
+        }
+        for(int j=i-1;j>=0;j--){
+            cout<<" <<j;}
+            cout<<endl;
+    }
+    
+} 
+</div>
+
+<div>
+460a
+<br>
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n,m;
+    cin>>n>>m;
+    int day=0;
+    while(n>0){
+        day = day+1;
+        n = n-1;
+        if(day%m==0){
+            n = n+1;
+        }
+    }
+    cout<<day<<endl;
+}
+
+</div>
