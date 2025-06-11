@@ -7,3 +7,5 @@ all the solutions of the leetcode will be in the same file and for codeforces th
 i have shifted to the branch feature1 and making changes in it now 
 hello guys
 this is a new line in  feature1
+i made a pull request and merged the two branches main and feature1 that i created 
+<br>
