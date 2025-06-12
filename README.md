@@ -1,12 +1,4 @@
-#solutions of cp and dsa
-<br>
-this is my first repository and in this repository i will include the solutions of the questions i solved in codeforces and leetcode 
-<br>
-all the solutions of the leetcode will be in the same file and for codeforces they will in its individual file 
-<br>
-i have shifted to the branch feature1 and making changes in it now 
-hello guys
-this is a new line in  feature1
-i made a pull request and merged the two branches main and feature1 that i created 
-<br>
-testing line 
+# CP-AND-DSA practise
+
+my this repository contains my progress in codeforces it contains the solutions of the codeforces contests that I attended and I was able to solve 
+this repository not contains all the contests , few of the contests of the beginning are not included here
