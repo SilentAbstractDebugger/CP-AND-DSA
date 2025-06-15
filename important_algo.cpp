@@ -122,3 +122,29 @@
 // }
 
 
+
+
+//permutations of a string
+// void solve(string & s,vector<string>& ans,int index){
+//     if(index>=s.length()){
+//         ans.push_back(s);
+//         return ;
+//     }
+//     for(int i=index;i<s.length();i++){
+//         swap(s[i],s[index]);
+//         solve(s,ans,index+1);
+        
+//         //backtracking
+//         swap(s[i],s[index]);
+//     }
+// }
+
+// int main(){
+//     string s;
+//     cin>>s;
+//     vector<string>ans;
+//     solve(s,ans,0);
+//     for(string i:ans){
+//         cout<<i<<endl;
+//     }
+// }
