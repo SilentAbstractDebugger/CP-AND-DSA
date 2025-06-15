@@ -27,6 +27,38 @@
 //     }
 // }
 
+// #include <bits/stdc++.h> 
+// using namespace std;
+// void solve(string& s,vector<string>& ans){
+//     int n = s.length();
+//     int total = 1<<n;
+//     for(int mask=0;mask<total;mask++){
+//         string arr;
+//         for(int i=0;i<n;i++){
+//             if((mask>>i )&1){
+//                 arr.push_back(s[i]);
+//             }
+//         }
+//         ans.push_back(arr);
+       
+//     }
+       
+// }
+
+// int main(){
+//    string s = "abc";
+//     vector<string>ans;
+//     solve(s,ans);
+//    for(string i:ans){
+//        cout<<i<<endl;
+//    }
+// }
+
+
+
+
+
+
 
 
 
@@ -59,5 +91,34 @@
 //     }
 // }
 
+// #include <bits/stdc++.h> 
+// using namespace std;
+// void solve(vector<int>& nums,vector<vector<int>>& ans){
+//     int n= nums.size();
+//     int total = 1<<n;
+//     for(int mask=0;mask<total;mask++){
+//         vector<int>arr;
+//         for(int i=0;i<n;i++){
+//             if((mask>>i )&1){
+//                 arr.push_back(nums[i]);
+//             }
+//         }
+//         ans.push_back(arr);
+//         arr.clear();
+//     }
+       
+// }
+
+// int main(){
+//     vector<int> nums = {1,2,3};
+//     vector<vector<int>>ans;
+//     solve(nums,ans);
+//    for (vector<int> i : ans) {
+//         for (int val : i) {
+//             cout << val << " ";
+//         }
+//         cout << endl;
+//     }
+// }
 
 
