@@ -47,6 +47,7 @@ int main(){
     vector<string> ans;
     string path="";
     if(m[0][0] ==1 ){
+        visited[0][0] = 1; ///this is too important so that it does not come back to 0 position again and again 
         solve(0,0,visited,n,path,m,ans);
     }
     for (string &p : ans) {
