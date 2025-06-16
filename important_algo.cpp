@@ -148,3 +148,65 @@
 //         cout<<i<<endl;
 //     }
 // }
+
+
+
+
+
+//rat in a maze filr for codestudio 
+#include <bits/stdc++.h>
+using namespace std;
+
+bool isSafe(int x, int y, int n, vector<vector<int>>& m, vector<vector<int>>& visited) {
+    return (x >= 0 && y >= 0 && x < n && y < n && m[x][y] == 1 && visited[x][y] == 0);
+}
+
+void solve(int x, int y, int n, vector<vector<int>>& m, vector<vector<int>>& visited, string path, vector<string>& ans) {
+    if (x == n - 1 && y == n - 1) {
+        ans.push_back(path);
+        return;
+    }
+
+    // Directions: D, L, R, U
+    int dx[] = {1, 0, 0, -1};
+    int dy[] = {0, -1, 1, 0};
+    char dir[] = {'D', 'L', 'R', 'U'};
+
+    for (int i = 0; i < 4; i++) {
+        int nx = x + dx[i];
+        int ny = y + dy[i];
+        if (isSafe(nx, ny, n, m, visited)) {
+            visited[nx][ny] = 1;
+            solve(nx, ny, n, m, visited, path + dir[i], ans);
+            visited[nx][ny] = 0; // backtrack
+        }
+    }
+}
+
+vector<string> searchMaze(vector<vector<int>>& m, int n) {
+    vector<vector<int>> visited(n, vector<int>(n, 0));
+    vector<string> ans;
+    string path = "";
+
+    if (m[0][0] == 1) {
+        visited[0][0] = 1; // 🔥 this is important
+        solve(0, 0, n, m, visited, path, ans);
+    }
+
+    sort(ans.begin(), ans.end()); // sort the paths
+    return ans;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    vector<vector<int>> m(n, vector<int>(n));
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            cin >> m[i][j];
+
+    vector<string> paths = searchMaze(m, n);
+    for (string& p : paths)
+        cout << p << " ";
+    return 0;
+}
