@@ -1,5 +1,3 @@
-// rat in a maze solution
-
 #include <bits/stdc++.h>
 using namespace std;
 bool issafe(int x,int y,int n,vector<vector<int>>& m,vector<vector<int>>& visited){
